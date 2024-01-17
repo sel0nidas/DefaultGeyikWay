@@ -11,8 +11,9 @@ app.get('/:link', async (req, res) => {
   //res.send(req.params.link)
   if(req.params.link.length < 1)
     const urlToScrape = `https://eksisozluk111.com`;
-  
-  const urlToScrape = `https://eksisozluk111.com/${req.params.link}`;
+  else{
+    const urlToScrape = `https://eksisozluk111.com/${req.params.link}`;
+  }
 
   // Fetch the page
   const $ = await fetchPage(urlToScrape);
