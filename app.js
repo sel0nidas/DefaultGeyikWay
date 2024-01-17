@@ -10,9 +10,9 @@ app.get('/:link', async (req, res) => {
   // Replace this URL with the one you want to scrape
   //res.send(req.params.link)
   if(req.params.link.length < 1)
-    const urlToScrape = `https://eksisozluk111.com`;
+    var urlToScrape = `https://eksisozluk111.com`;
   else{
-    const urlToScrape = `https://eksisozluk111.com/${req.params.link}`;
+    var urlToScrape = `https://eksisozluk111.com/${req.params.link}`;
   }
 
   // Fetch the page
